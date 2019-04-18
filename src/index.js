@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
-
-const MyContext = React.createContext("default");
+import React, {useState, useEffect} from 'react'
+import ReactDOM from 'react-dom'
+const MyContext = React.createContext("default")
 
 // Sorry for rubbish variable names!
 const ARenderPropsCounterConnectedWithContext = () => 
@@ -17,6 +16,10 @@ const AFunctionnalComponentWithHook = () => {
     const handleChangeField1 = e => setField1(e.target.value)
     const handleChangeField2 = e => setField2(e.target.value)
     
+    useEffect( _ => {
+        document.title = field1 + field2
+    })
+
     return <div>
                 <h3>Form fields</h3>
                 <p>Fields will be updated using a hook : <br/>
