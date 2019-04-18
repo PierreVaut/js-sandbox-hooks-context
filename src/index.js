@@ -13,12 +13,16 @@ ARenderPropsCounterConnectedWithContext.contextType = MyContext
 const AFunctionnalComponentWithHook = () => {
     const [field1, setField1] = useState('')
     const [field2, setField2] = useState('')
+    let [renderCount, incrementRenderCount] = useState(0)
     const handleChangeField1 = e => setField1(e.target.value)
     const handleChangeField2 = e => setField2(e.target.value)
+    const addRenderCount = _ => incrementRenderCount(renderCount + 1)
     
     useEffect( _ => {
+        addRenderCount();
+        console.log("useEFfect")
         document.title = field1 + field2
-    })
+    }, [field1, field2])
 
     return <div>
                 <h3>Form fields</h3>
@@ -27,7 +31,9 @@ const AFunctionnalComponentWithHook = () => {
                 field1: {field1} <br/>
                 field2: {field2}</p>
                 <input value={field1} onChange={handleChangeField1}></input><br />
-                <input value={field2} onChange={handleChangeField2}></input>
+                <input value={field2} onChange={handleChangeField2}></input><br />
+                <br />
+                Effect hook render count: {renderCount}
             </div>
 }
 
