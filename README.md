@@ -10,7 +10,7 @@
 - React context : [https://reactjs.org/docs/context.html](https://reactjs.org/docs/context.html)
 
 
-- React Today and Tomorrow and 90% Cleaner React With Hooks, React Conf 2018: [https://www.youtube.com/watch?v=dpw9EHDh2bM]](https://www.youtube.com/watch?v=dpw9EHDh2bM)
+- React Today and Tomorrow and 90% Cleaner React With Hooks, React Conf 2018: [https://www.youtube.com/watch?v=dpw9EHDh2bM](https://www.youtube.com/watch?v=dpw9EHDh2bM)
 
 
 
